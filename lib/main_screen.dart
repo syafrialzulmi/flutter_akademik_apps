@@ -27,7 +27,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.white,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(70.0),
         child: AppBar(
@@ -48,8 +48,7 @@ class _MainScreenState extends State<MainScreen> {
                             'Hai, Sheila Shafitri',
                             maxLines: 1,
                             style: TextStyle(
-                              fontFamily: 'Poppins',
-                              fontSize: 18,
+                              fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: Color(0xff020202),
                             ),
@@ -58,7 +57,6 @@ class _MainScreenState extends State<MainScreen> {
                             '1301100310 - Sistem Informasi',
                             maxLines: 1,
                             style: TextStyle(
-                              fontFamily: 'Poppins',
                               fontSize: 12,
                               fontWeight: FontWeight.bold,
                               color: Color(0xff9A9A9A),
@@ -82,8 +80,7 @@ class _MainScreenState extends State<MainScreen> {
                   _title,
                   maxLines: 1,
                   style: TextStyle(
-                    fontFamily: 'Poppins',
-                    fontSize: 18,
+                    fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: Color(0xff020202),
                   ),

@@ -10,6 +10,10 @@ class MyApp extends StatelessWidget {
       title: 'Akademi Apps',
       debugShowCheckedModeBanner: false,
       home: MainScreen(),
+      theme: ThemeData(
+        fontFamily: 'Poppins',
+        primaryColor: Color(0xff0073AC),
+      ),
     );
   }
 }
