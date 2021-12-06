@@ -102,44 +102,60 @@ class IconButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(5),
+      margin: EdgeInsets.symmetric(horizontal: 5),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
             margin: EdgeInsets.all(5),
-            height: 60,
-            width: 60,
-            decoration: BoxDecoration(
-              color: Colors.white,
+            child: Material(
               borderRadius: BorderRadius.all(
                 Radius.circular(15),
               ),
-            ),
-            child: Center(
-              child: Stack(
-                children: [
-                  Icon(
-                    iconLabel,
-                    color: Theme.of(context).primaryColor,
-                    size: 45,
+              color: Colors.transparent,
+              child: InkWell(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(15),
+                ),
+                onTap: () {},
+                child: Container(
+                  // margin: EdgeInsets.all(5),
+                  height: 60,
+                  width: 60,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(15),
+                    ),
                   ),
-                  notifikasi
-                      ? Positioned(
-                          top: 5,
-                          left: 25,
-                          child: Container(
-                            padding: EdgeInsets.all(1),
-                            decoration: BoxDecoration(
-                                color: Colors.red, shape: BoxShape.circle),
-                            constraints: BoxConstraints(
-                              minHeight: 13,
-                              minWidth: 13,
-                            ),
-                          ),
-                        )
-                      : Text(''),
-                ],
+                  child: Center(
+                    child: Stack(
+                      children: [
+                        Icon(
+                          iconLabel,
+                          color: Theme.of(context).primaryColor,
+                          size: 45,
+                        ),
+                        notifikasi
+                            ? Positioned(
+                                top: 5,
+                                left: 25,
+                                child: Container(
+                                  padding: EdgeInsets.all(1),
+                                  decoration: BoxDecoration(
+                                      color: Colors.red,
+                                      shape: BoxShape.circle),
+                                  constraints: BoxConstraints(
+                                    minHeight: 13,
+                                    minWidth: 13,
+                                  ),
+                                ),
+                              )
+                            : Text(''),
+                      ],
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
