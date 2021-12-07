@@ -74,14 +74,40 @@ class HomePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    IconButton('Notifikasi', Icons.notifications, true),
-                    IconButton('Scan QR', Icons.qr_code_scanner_sharp, false),
+                    IconButtonIP('Notifikasi', Icons.notifications, true),
+                    IconButtonIP('Scan QR', Icons.qr_code_scanner_sharp, false),
                   ],
                 ),
               ],
             ),
           ),
-          Text('data 2'),
+          Container(
+            padding: EdgeInsets.symmetric(
+              vertical: 20,
+            ),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton('Kalender', Icons.calendar_today),
+                    IconButton('Pesan', Icons.mail),
+                    IconButton('Repositori', Icons.folder),
+                    IconButton('Presensi', Icons.security),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    IconButton('UKT', Icons.account_balance_wallet),
+                    IconButton('Catatan', Icons.edit_road_outlined),
+                    IconButton('Transkrip', Icons.bar_chart),
+                    IconButton('Lainnya', Icons.important_devices_outlined),
+                  ],
+                ),
+              ],
+            ),
+          ),
           Text('data 3'),
           Text('data 4'),
           Text('data 5'),
@@ -95,9 +121,69 @@ class HomePage extends StatelessWidget {
 class IconButton extends StatelessWidget {
   final String nameLabel;
   final IconData iconLabel;
+
+  IconButton(this.nameLabel, this.iconLabel);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 5),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            margin: EdgeInsets.all(5),
+            child: Material(
+              borderRadius: BorderRadius.all(
+                Radius.circular(15),
+              ),
+              color: Colors.transparent,
+              child: InkWell(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(15),
+                ),
+                onTap: () {},
+                child: Container(
+                  // margin: EdgeInsets.all(5),
+                  height: 60,
+                  width: 60,
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).primaryColor,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(15),
+                    ),
+                  ),
+                  child: Center(
+                    child: Stack(
+                      children: [
+                        Icon(
+                          iconLabel,
+                          color: Colors.white,
+                          size: 40,
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Text(
+            nameLabel,
+            style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class IconButtonIP extends StatelessWidget {
+  final String nameLabel;
+  final IconData iconLabel;
   final bool notifikasi;
 
-  IconButton(this.nameLabel, this.iconLabel, this.notifikasi);
+  IconButtonIP(this.nameLabel, this.iconLabel, this.notifikasi);
 
   @override
   Widget build(BuildContext context) {
