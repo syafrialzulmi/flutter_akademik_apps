@@ -28,6 +28,8 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   # flutter_icons: ^1.0.0+1
+  # d_chart: ^0.0.3
+  fl_chart: ^0.40.6
   http: ^0.13.4
   flutter_svg: ^0.23.0+1
   carousel_slider: ^4.0.0

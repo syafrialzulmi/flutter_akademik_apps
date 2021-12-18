@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import '/widgets/label_name.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -156,8 +157,7 @@ class _HomePageState extends State<HomePage> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               image: DecorationImage(
-                image: NetworkImage(
-                    "https://gkprodstorage.blob.core.windows.net/wpmediafilesblog/2020/06/Kuliah-di-Universitas-Swasta-Kok-Minder-Kenapa.jpg"),
+                image: AssetImage("assets/images/news_1.jpeg"),
                 fit: BoxFit.cover,
               ),
             ),
@@ -268,27 +268,6 @@ class JadwalItem extends StatelessWidget {
             ),
           )
         ],
-      ),
-    );
-  }
-}
-
-class LabelSubHeader extends StatelessWidget {
-  final String nameHeader;
-
-  LabelSubHeader(this.nameHeader);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(bottom: 10),
-      child: Text(
-        nameHeader,
-        style: TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
-          color: Color(0xff020202),
-        ),
       ),
     );
   }
