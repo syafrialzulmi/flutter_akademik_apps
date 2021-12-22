@@ -136,7 +136,7 @@ class _HomePageState extends State<HomePage> {
                         'Sastro Wardoyo, S.Pd., M.Pd.', '13.00'),
                   ],
                   options: CarouselOptions(
-                    height: 130.0,
+                    height: 140.0,
                     enlargeCenterPage: true,
                     autoPlay: true,
                     aspectRatio: 16 / 9,
