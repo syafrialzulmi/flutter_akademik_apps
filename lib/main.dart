@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_akademik_apps/main_screen.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
       home: MainScreen(),
       theme: ThemeData(
         fontFamily: 'Poppins',
-        primaryColor: Color(0xff0073AC),
+        primaryColor: const Color(0xff0073AC),
       ),
     );
   }
